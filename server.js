@@ -10,7 +10,6 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
-// Autocomplete API (working ✅)
 app.get('/autocomplete', async (req, res) => {
   const { input, sessiontoken } = req.query;
 
@@ -30,7 +29,7 @@ app.get('/autocomplete', async (req, res) => {
   }
 });
 
-// ✅ Place Details API (fix for your error)
+
 app.get('/place-details', async (req, res) => {
   const { place_id } = req.query;
 
@@ -50,7 +49,6 @@ app.get('/place-details', async (req, res) => {
   }
 });
 
-// ✅ Optional: Directions API (for routing)
 app.get('/directions', async (req, res) => {
   const { origin, destination } = req.query;
 
